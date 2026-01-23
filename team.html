@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kruth Team</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="keywords" content="Kruth, pvp client 1.8.9, Nepal Minecraft, Kruth client, PVP">
+    <meta name="description" content="Kruth: Nepal's premier Minecraft 1.8.9 PVP client. Engineered for performance and precision.">
+    <title>Kruth Client | High Performance PVP</title>
+    <link rel="icon" type="image/x-icon" href="/resources/logo.png">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.8/dist/index.umd.js"></script>
+
+<style>
+:root{
+  --accent:#6366f1;
+  --accent-glow:rgba(99,102,241,.22);
+  --glass:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.1);
+  --text-dim:#9ca3af;
+}
+
+*{box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+body{
+  margin:0;
+  background:rgb(10,12,13);
+  color:#fff;
+  overflow-x:hidden;
+}
+:root {
+  --dot-color: rgba(99, 102, 241, 0.35);
+  --dot-glow: rgba(99, 102, 241, 0.6);
+  --bg-base: #101316d2;
+  --text-primary:#f8fafc;
+  --text-secondary:#9ca3af;
+
+}
+.dotted-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+
+  background-size: 28px 28px;
+  background-position: 0 0;
+
+  animation: dotsMove 22s linear infinite;
+}
+.dotted-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle, var(--dot-glow) 1px, transparent 2px);
+
+  background-size: 56px 56px;
+  background-position: 20px 20px;
+
+  opacity: 0.18;
+  filter: blur(0.5px);
+
+  animation: dotsMoveReverse 40s linear infinite;
+  pointer-events: none;
+}
+.dotted-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top, transparent 30%, rgba(0,0,0,0.85) 85%),
+    radial-gradient(circle at bottom, rgba(0,0,0,0.6), transparent 55%);
+
+  pointer-events: none;
+}
+@keyframes dotsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 160px 160px;
+  }
+}
+
+@keyframes dotsMoveReverse {
+  from {
+    background-position: 160px 160px;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.page{
+  padding:80px 8% 160px;
+  text-align:center;
+}
+.team-header{
+  margin-bottom:50px;
+}
+.team-header h2{
+  font-size:3rem;
+  font-weight:800;
+  margin-bottom:10px;
+  background:linear-gradient(to bottom,#fff,#94a3b8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.team-header p{
+  color:var(--text-dim);
+  font-size:.95rem;
+}
+.section-label{
+  letter-spacing:4px;
+  font-size:.8rem;
+  color:var(--accent);
+  margin:60px 0 30px;
+}
+.card{
+  position: relative;
+  width:280px;
+  padding:42px 30px;
+  border-radius:26px;
+  cursor:pointer;
+  background: transparent;
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55);
+
+  transition:
+    transform .6s cubic-bezier(.22,1,.36,1),
+    box-shadow .6s ease,
+    border-color .4s ease;
+
+  animation: float 7s ease-in-out infinite;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:26px;
+  background: rgba(15, 17, 22, 0.1);
+
+  pointer-events:none;
+  z-index:0;
+}
+.card > *{
+  position: relative;
+  z-index: 1;
+}
+.card > *{
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+.card:hover{
+  transform:translateY(-18px) scale(1.04);
+  box-shadow:0 40px 90px rgba(99,102,241,.22);
+}
+.skin-wrap{
+  position:relative;
+  height:250px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+}
+.skin-wrap img{
+  height:235px;
+  image-rendering:pixelated;
+  filter:
+    drop-shadow(0 22px 34px rgba(0,0,0,.65))
+    drop-shadow(0 0 18px var(--accent-glow));
+}
+.glow{
+  position:absolute;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--accent),transparent 70%);
+  filter:blur(26px);
+  opacity:.45;
+  animation:pulse 4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:.35}
+  50%{transform:scale(1.12);opacity:.6}
+}
+.name{
+  font-size:1.35rem;
+  font-weight:800;
+  margin-top:10px;
+}
+.role{
+  font-size:.7rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-top:4px;
+}
+.discord{
+  margin-top:14px;
+  font-size:1.2rem;
+  color:var(--accent);
+  opacity:.9;
+}
+.grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(2, 280px);
+  gap:44px;
+  justify-content:center;
+}
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.modal.active{display:flex}
+.modal-card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:50px;
+  width:320px;
+  text-align:center;
+  backdrop-filter:blur(22px);
+  animation: pop .45s cubic-bezier(.22,1,.36,1);
+}
+@keyframes pop{
+  from{transform:scale(.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.close{
+  margin-top:28px;
+  color:var(--text-dim);
+  cursor:pointer;
+}
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 100px);
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 42px;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid transparent;
+
+    border-radius: 999px;
+
+    transition:
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        border 0.4s ease;
+}
+.floating-nav.active {
+    background: rgba(15, 15, 18, 0.65);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+.discord-btn {
+    background: var(--text-primary);
+    color: var(--bg-darker) !important;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.discord-icon-btn{
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #5865F2;
+    color: #fff !important;
+
+    border-radius: 14px;
+    font-size: 1.25rem;
+
+    box-shadow:
+        0 8px 24px rgba(88,101,242,0.45);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+.discord-icon-btn:hover{
+    transform: translateY(-2px) scale(1.06);
+    box-shadow:
+        0 0 0 6px rgba(88,101,242,0.18),
+        0 14px 34px rgba(88,101,242,0.65);
+    filter: brightness(1.08);
+}
+
+.discord-icon-btn i{
+    pointer-events: none;
+}
+.dev-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(2, 280px);
+  gap:44px;
+  justify-content:center;
+}
+.center-dev{
+  grid-column:1 / -1;
+}
+.flag {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 0 3px rgba(0,0,0,0.35),
+    0 0 14px rgba(99,102,241,0.35);
+
+  z-index: 3;
+}
+
+.flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav-links a.active {
+
+}
+.nav-links a.active::after {
+  width: 140%;
+  opacity: 1;
+}
+
+.nav-links a.active {
+  font-weight: 700;
+}
+
+</style>
+</head>
+
+<body>
+<div class="dotted-bg"></div>
+
+<div class="page">
+
+   
+<nav class="navbar floating-nav">
+    <a href="index.html" class="brand" rel="noopener">
+    <img src="/resources/logo.png" alt="Kruth Logo" style="width: 42px;">
+    <span></span>
+</a>
+    <div class="nav-links">
+        <a href="#partners">Partners</a>
+        <a href="#connect">Connect</a>
+        <a href="team.html">Team</a>
+        <a href="https://discord.gg/cAuDFmBEFK" target="_blank" class="discord-icon-btn" aria-label="Discord">
+    <i class="fab fa-discord"></i>
+</a>
+
+    </div>
+</nav>
+  
+  <div class="team-header">
+    <h2>The Core Team</h2>
+    <p style="font-size:larger;">The minds behind Kruth.</p>
+  </div>
+
+  
+ 
+<div class="section-label">OWNERS</div>
+
+<div class="grid">
+  
+  <div class="card" onclick="openModal('ThatOneDipu','Owner')">
+    <div class="flag">
+  <img src="https://flagcdn.com/w40/np.png" alt="Nepal">
+</div>
+
+    <div class="skin-wrap">
+      <span class="glow"></span>
+      <img src="https://mc-heads.net/body/ROOP/300">
+    </div>
+    <div class="name">ThatOneDipu</div>
+    <div class="role">OWNER</div>
+    <i class="fab fa-discord discord"></i>
+  </div>
+
+  
+  <div class="card" onclick="openModal('Cycy_yee','Owner')">
+    <div class="flag">
+  <img src="https://flagcdn.com/w40/cn.png" alt="China">
+</div>
+    <div class="skin-wrap">
+      <span class="glow"></span>
+      <img src="https://mc-heads.net/body/Steve/300">
+    </div>
+    <div class="name">Cycy_yee</div>
+    <div class="role">OWNER</div>
+    <i class="fab fa-discord discord"></i>
+  </div>
+</div>
+ 
+<div class="section-label">DEVELOPERS</div>
+
+<div class="dev-grid">
+  <div class="card" onclick="openModal('8qBit','Web Developer')">
+    <div class="flag">
+  <img src="https://flagcdn.com/w40/in.png" alt="India">
+</div>
+
+    <div class="skin-wrap">
+      <span class="glow"></span>
+      <img src="https://mc-heads.net/body/8qBit/300">
+    </div>
+    <div class="name">8qBit</div>
+    <div class="role">Web Developer</div>
+    <i class="fab fa-discord discord"></i>
+  </div>
+
+  <div class="card" onclick="openModal('T3kkm0tt','Lead Developer')">
+    <div class="flag">
+  <img src="https://flagcdn.com/w40/de.png" alt="Germany">
+</div>
+
+    <div class="skin-wrap">
+      <span class="glow"></span>
+      <img src="https://mc-heads.net/body/SP/300">
+    </div>
+    <div class="name">T3kkm0tt</div>
+    <div class="role">Lead Developer</div>
+    <i class="fab fa-discord discord"></i>
+  </div>
+</div>
+
+</div>
+
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <h2 id="mName"></h2>
+    <p id="mRole" class="role"></p>
+    <div class="close" onclick="closeModal()">Close</div>
+  </div>
+</div>
+</div>
+</div>
+
+<style>
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    white-space: nowrap;
+    flex-wrap: nowrap;
+
+    z-index: 1;
+}
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.25rem;
+    line-height: 1;
+
+    transition: transform .25s ease, filter .25s ease;
+}
+.footer-socials a.discord { color: #5865F2; }
+.footer-socials a.github  { color: #e5e7eb; }
+.footer-socials a.youtube { color: #FF0000; }
+.footer-socials a.x       { color: #050507; }
+.footer-socials a:hover {
+    transform: translateY(-3px) scale(1.08);
+    filter: drop-shadow(0 0 12px currentColor);
+}
+</style>
+
+<style>
+.kruth-footer{
+    position:relative;
+    width:100%;
+    padding:28px 10% 24px;
+    text-align:center;
+
+    background:rgba(10,10,12,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+    border-radius:30px 30px 0 0;
+    box-shadow:0 -10px 40px rgba(0,0,0,.35);
+    overflow:hidden;
+}
+
+.kruth-footer::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        rgba(99,102,241,.35),
+        rgba(239,68,68,.18),
+        rgba(0,255,160,.18)
+    );
+    opacity:.12;
+    filter:blur(18px);
+    pointer-events:none;
+}
+
+.footer-logo{
+    width:44px;
+    opacity:.85;
+    margin-bottom:10px;
+    position:relative;
+    z-index:1;
+}
+
+.footer-text{
+    font-size:.9rem;
+    line-height:1.35;
+    color:#9ca3af;
+    margin-bottom:14px;
+    position:relative;
+    z-index:1;
+}
+.footer-socials{
+    display:block;
+    white-space:nowrap;
+    position:relative;
+    z-index:1;
+}
+
+.footer-socials a{
+    display:inline-block;
+    margin:0 8px;
+    text-decoration:none !important;
+}
+
+.footer-socials svg{
+    width:22px;
+    height:22px;
+    vertical-align:middle;
+    transition:transform .25s ease, filter .25s ease;
+}
+
+.footer-socials a:hover svg{
+    transform:translateY(-3px) scale(1.08);
+    filter:drop-shadow(0 0 10px currentColor);
+}
+</style>
+
+<footer class="kruth-footer">
+    <img src="/resources/logo.png" class="footer-logo" alt="Kruth Logo">
+
+    <p class="footer-text">
+        © 2025 Kruth Development Team · Not affiliated with Minecraft<br>
+        All rights reserved. All wrongs reversed.
+    </p>
+
+    <div class="footer-socials">
+    
+    <a href="https://discord.gg/rRGgKE5rjU" target="_blank" style="color:#5865F2">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.3 4.5A19.8 19.8 0 0 0 15.8 3l-.3.6a18 18 0 0 1 4.3 1.7 17.3 17.3 0 0 0-15.6 0A18 18 0 0 1 8.5 3l-.3-.6A19.8 19.8 0 0 0 3.7 4.5C.9 8.6.2 12.5.5 16.3a19.8 19.8 0 0 0 6 3c.5-.7 1-1.5 1.3-2.3a12.6 12.6 0 0 1-2-.9l.5-.4a14.2 14.2 0 0 0 12.4 0l.5.4c-.6.4-1.3.7-2 .9.4.8.8 1.6 1.3 2.3a19.8 19.8 0 0 0 6-3c.3-3.8-.4-7.7-3.2-11.8ZM8.7 13.8c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/>
+        </svg>
+    </a>
+
+    
+    <a href="https://www.youtube.com/@officialkruthclient" target="_blank" style="color:#FF0000">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-2-1-2.5-1.1C16.6 2.5 12 2.5 12 2.5s-4.6 0-8.1.2c-.5.1-1.6.2-2.5 1.1-.7.7-.9 2.4-.9 2.4S.3 8.1.3 10v2c0 1.9.2 3.8.2 3.8s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1C6.6 19.5 12 19.5 12 19.5s4.6 0 8.1-.2c.5-.1 1.6-.2 2.5-1.1.7-.7.9-2.4.9-2.4s.2-1.9.2-3.8v-2c0-1.9-.2-3.8-.2-3.8ZM9.7 14.1V7.9L15.5 11l-5.8 3.1Z"/>
+        </svg>
+    </a>
+</div>
+
+</footer>
+<script>
+function openModal(name, role){
+  document.getElementById("mName").innerText=name;
+  document.getElementById("mRole").innerText=role;
+  document.getElementById("modal").classList.add("active");
+}
+function closeModal(){
+  document.getElementById("modal").classList.remove("active");
+}
+
+ const navbar = document.querySelector(".floating-nav");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add("active");
+        } else {
+            navbar.classList.remove("active");
+        }
+    });
+
+     const currentPath = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const linkPath = link.getAttribute("href")?.split("/").pop();
+
+    if (
+      linkPath === currentPath ||
+      (currentPath === "" && linkPath === "index.html")
+    ) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
